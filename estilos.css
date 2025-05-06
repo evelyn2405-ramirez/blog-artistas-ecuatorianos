@@ -1,0 +1,218 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: 'georgia', serif; /* Fuente del cuerpo */
+    background-color: #23c0e7; /* Color de fondo claro del cuerpo */
+    color: #0c0c0c; /* Color de texto oscuro del cuerpo */
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto dentro de los elementos (general) */
+    min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la ventana */
+    margin: 0;
+    padding: 20px 0; /* Espacio superior e inferior */
+}
+
+.contenedor-principal {
+    max-width: 960px; /* Ancho máximo del contenido principal */
+    width: 90%; /* Ancho adaptable para diferentes pantallas */
+    margin: 20px auto; /* Centra el contenedor principal */
+    padding: 20px;
+    background-color: #23c0e7; /* Fondo del contenedor principal (igual al body) */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+img {
+    width: 250px; /* Ancho base para las imágenes */
+    height: 200px; /* Altura base para las imágenes */
+    object-fit: cover; /* Mantiene la proporción y cubre el espacio */
+}
+
+/* --- Barra de Navegación --- */
+.navbar-light .navbar-nav .nav-link {
+    color: #0a0a0a; /* Color del texto de los enlaces */
+}
+
+.navbar-light .navbar-brand {
+    color: rgb(207, 25, 34); /* Color de la marca */
+}
+
+.bg-light {
+    background-color: rgb(207, 25, 34) !important; /* Fondo de la barra de navegación */
+    width: max-content;
+}
+
+nav a {
+    display: inline-block;
+    background-color: #f0c800; /* Fondo de los enlaces de navegación */
+    color: #000; /* Color del texto de los enlaces de navegación */
+    padding: 10px 15px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffd700; /* Color de los enlaces al pasar el mouse */
+}
+
+/* --- Títulos --- */
+h1 {
+    font-family: 'times new roman', serif;
+    color: #0e0c0c;
+    margin-bottom: 1.5rem;
+    margin-top: 40px;
+    text-align: center; /* Centra los títulos h1 */
+}
+
+/* --- Tarjetas de Artistas --- */
+.card {
+    border: 1px solid #ddd;
+    background-color: transparent; /* Fondo transparente de la tarjeta */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    text-align: center; /* Centra el contenido dentro de la tarjeta */
+}
+
+.imagen-artista {
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    height: auto;
+    object-fit: cover;
+}
+
+.card-title {
+    color: rgb(207, 25, 34);
+    font-size: 1.5rem;
+    margin-top: 10px; /* Espacio superior para el título */
+}
+
+.card .card-img-top {
+    width: 100%;
+    height: 200px; /* Altura base para las imágenes de las tarjetas */
+    object-fit: cover;
+}
+
+/* --- Formulario de Contacto --- */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#formularioContacto {
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffd700; /* Fondo amarillo claro para el formulario */
+}
+
+#formularioContacto .form-control {
+    border-color: #350af5;
+    border-radius: 5px;
+}
+
+#formularioContacto .btn-primary {
+    background-color: rgb(207, 25, 34);
+    border-color: #af2b0a;
+}
+
+#formularioContacto .btn-primary:hover {
+    background-color: rgb(207, 25, 34);
+    border-color: #af2b0a;
+}
+
+#formularioContacto .form-group label[for="comentario"] {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#formularioContacto #comentario {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #350af5;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+#formularioContacto #comentario:focus {
+    outline: none;
+    border-color: #350af5;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#errorComentario {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.titulo-formulario {
+    background-color: #ffd700;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Contenedor Centrado Genérico --- */
+.contenedor-centrado {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;    /* Centra verticalmente */
+    height: 100px;
+    font-size: large;
+}
+
+/* --- Estilos para Biografía e Información de Contacto (si los usas dentro de .contenedor-principal) --- */
+.biografia, .informacion-contacto {
+    margin-bottom: 20px;
+}
+
+footer.bg-light { /* Especificamos que solo afecte a la etiqueta footer con la clase bg-light */
+    width: 100%; /* Ocupa todo el ancho del contenedor padre (el body) */
+    background-color: rgb(207, 25, 34) !important; /* El color rojo que deseas */
+    color: white; /* Color del texto para que contraste con el rojo */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 10px 0; /* Añade un poco de espacio vertical */
+    margin-top: 0 !important; /* Elimina el margen superior que podría estar afectando */
+  }
+  
+  footer.bg-light p { /* Estilo para el párrafo dentro del footer */
+    margin: 0; /* Elimina el margen predeterminado del párrafo para evitar espacio extra */
+  }
+
+  header nav.navbar {
+    width: 100%; /* Asegura que la barra de navegación ocupe el 100% del ancho de su contenedor padre (que suele ser el body) */
+    /* Los siguientes estilos ya los tenías para el color de fondo y texto, los mantengo aquí por consistencia */
+    background-color: rgb(207, 25, 34) !important; /* Fondo rojo */
+    color: white !important; /* Texto blanco */
+  }
+  
+  /* Opcional: Si necesitas ajustar el espaciado interno de la barra de navegación (padding) */
+  header nav.navbar {
+    padding-left: 15px; /* Ajusta el relleno izquierdo si es necesario */
+    padding-right: 15px; /* Ajusta el relleno derecho si es necesario */
+  }
+  
+  /* Opcional: Si el contenido dentro de la barra de navegación no se extiende al borde, puedes intentar esto */
+  .container-fluid { /* Si Bootstrap está utilizando esta clase para el contenedor interno */
+    padding-left: 0;
+    padding-right: 0;
+  } 
+
